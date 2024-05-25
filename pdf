@@ -1,0 +1,20 @@
+<script>
+function saveAsPDF() {
+  // Get the editable content
+  var content = document.getElementById('editable-content').innerHTML;
+  
+  // Create a new window
+  var win = window.open('', '_blank');
+  
+  // Write content to the new window
+  win.document.write('<html><head><title>PDF Document</title></head><body>');
+  win.document.write(content);
+  win.document.write('</body></html>');
+  
+  // Close the document and trigger print
+  win.document.close();
+  win.print();
+}
+</script>
+</body>
+</html>
